@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		F91E9731276E4E15009A2EE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9730276E4E15009A2EE7 /* AppDelegate.swift */; };
 		F91E9733276E4E15009A2EE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9732276E4E15009A2EE7 /* SceneDelegate.swift */; };
-		F91E9735276E4E15009A2EE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9734276E4E15009A2EE7 /* ViewController.swift */; };
+		F91E9735276E4E15009A2EE7 /* FruitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9734276E4E15009A2EE7 /* FruitsTableViewController.swift */; };
 		F91E9738276E4E15009A2EE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91E9736276E4E15009A2EE7 /* Main.storyboard */; };
 		F91E973A276E4E17009A2EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F91E9739276E4E17009A2EE7 /* Assets.xcassets */; };
 		F91E973D276E4E17009A2EE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91E973B276E4E17009A2EE7 /* LaunchScreen.storyboard */; };
 		F91E9748276E4E18009A2EE7 /* FruitsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9747276E4E18009A2EE7 /* FruitsAppTests.swift */; };
 		F91E9753276E4E18009A2EE7 /* FruitsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9752276E4E18009A2EE7 /* FruitsAppUITests.swift */; };
+		F91E9770276E4F93009A2EE7 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E976F276E4F93009A2EE7 /* WebService.swift */; };
+		F91E9771276E4F93009A2EE7 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E976F276E4F93009A2EE7 /* WebService.swift */; };
+		F91E9779276E5789009A2EE7 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9778276E5789009A2EE7 /* Fruit.swift */; };
+		F91E977A276E5789009A2EE7 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9778276E5789009A2EE7 /* Fruit.swift */; };
+		F91E977F276E5842009A2EE7 /* FruitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E977E276E5842009A2EE7 /* FruitViewModel.swift */; };
+		F91E9780276E5842009A2EE7 /* FruitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E977E276E5842009A2EE7 /* FruitViewModel.swift */; };
+		F9E79289276E670B00232632 /* FruitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E79288276E670B00232632 /* FruitDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +45,7 @@
 		F91E972D276E4E15009A2EE7 /* FruitsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91E9730276E4E15009A2EE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F91E9732276E4E15009A2EE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F91E9734276E4E15009A2EE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F91E9734276E4E15009A2EE7 /* FruitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsTableViewController.swift; sourceTree = "<group>"; };
 		F91E9737276E4E15009A2EE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F91E9739276E4E17009A2EE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F91E973C276E4E17009A2EE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,10 @@
 		F91E974E276E4E18009A2EE7 /* FruitsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91E9752276E4E18009A2EE7 /* FruitsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsAppUITests.swift; sourceTree = "<group>"; };
 		F91E9754276E4E18009A2EE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F91E976F276E4F93009A2EE7 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		F91E9778276E5789009A2EE7 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
+		F91E977E276E5842009A2EE7 /* FruitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewModel.swift; sourceTree = "<group>"; };
+		F9E79288276E670B00232632 /* FruitDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +110,12 @@
 		F91E972F276E4E15009A2EE7 /* FruitsApp */ = {
 			isa = PBXGroup;
 			children = (
+				F91E976E276E4F3E009A2EE7 /* Controllers */,
+				F91E976A276E4F28009A2EE7 /* Services */,
+				F91E9769276E4F1F009A2EE7 /* ViewModel */,
+				F91E9766276E4EEA009A2EE7 /* Model */,
 				F91E9730276E4E15009A2EE7 /* AppDelegate.swift */,
 				F91E9732276E4E15009A2EE7 /* SceneDelegate.swift */,
-				F91E9734276E4E15009A2EE7 /* ViewController.swift */,
 				F91E9736276E4E15009A2EE7 /* Main.storyboard */,
 				F91E9739276E4E17009A2EE7 /* Assets.xcassets */,
 				F91E973B276E4E17009A2EE7 /* LaunchScreen.storyboard */,
@@ -126,6 +140,39 @@
 				F91E9754276E4E18009A2EE7 /* Info.plist */,
 			);
 			path = FruitsAppUITests;
+			sourceTree = "<group>";
+		};
+		F91E9766276E4EEA009A2EE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F91E9778276E5789009A2EE7 /* Fruit.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F91E9769276E4F1F009A2EE7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F91E977E276E5842009A2EE7 /* FruitViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F91E976A276E4F28009A2EE7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F91E976F276E4F93009A2EE7 /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F91E976E276E4F3E009A2EE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F91E9734276E4E15009A2EE7 /* FruitsTableViewController.swift */,
+				F9E79288276E670B00232632 /* FruitDetailsViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +305,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F91E9735276E4E15009A2EE7 /* ViewController.swift in Sources */,
+				F91E9779276E5789009A2EE7 /* Fruit.swift in Sources */,
+				F91E977F276E5842009A2EE7 /* FruitViewModel.swift in Sources */,
+				F91E9735276E4E15009A2EE7 /* FruitsTableViewController.swift in Sources */,
 				F91E9731276E4E15009A2EE7 /* AppDelegate.swift in Sources */,
+				F9E79289276E670B00232632 /* FruitDetailsViewController.swift in Sources */,
+				F91E9770276E4F93009A2EE7 /* WebService.swift in Sources */,
 				F91E9733276E4E15009A2EE7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +319,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91E977A276E5789009A2EE7 /* Fruit.swift in Sources */,
+				F91E9780276E5842009A2EE7 /* FruitViewModel.swift in Sources */,
+				F91E9771276E4F93009A2EE7 /* WebService.swift in Sources */,
 				F91E9748276E4E18009A2EE7 /* FruitsAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
