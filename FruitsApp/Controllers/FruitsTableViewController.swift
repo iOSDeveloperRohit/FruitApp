@@ -12,7 +12,6 @@ class FruitsTableViewController: UITableViewController {
     @IBOutlet var fruitsTableView: UITableView!
     var fruitsListVM = FruitListViewModel()
     var usageStatViewModel = UsageStatViewModel()
-    
     // Activity indicator
     private let activityIndicatorView: UIActivityIndicatorView = {
         let actView = UIActivityIndicatorView(style: .large)
@@ -44,6 +43,7 @@ class FruitsTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         guard let navBar = navigationController?.navigationBar else {
             fatalError("Navigation controller does not exist.")
         }
@@ -54,13 +54,17 @@ class FruitsTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showFruitsDetails" {
+            let destinationStartTime = CACurrentMediaTime()
+
             guard let fruitsDetailsVC = segue.destination as? FruitDetailsViewController else {
                 let usageStat = UsageStat(event: UsageEventType.error, data: "\(#function) : FruitDetailsViewController not found")
-                self.usageStatViewModel.usageStat =  usageStat
+                self.fruitsListVM.usageStatViewModel.usageStat =  usageStat
                 return
             }
             if let selectedIndex = self.tableView.indexPathForSelectedRow?.row {
-                fruitsDetailsVC.fruitVM = self.fruitsListVM.fruitVMAt(index: selectedIndex)
+                var fruitDetailsVM = FruitDetailsViewModel(fruitViewModel: self.fruitsListVM.fruitVMAt(index: selectedIndex))
+                fruitDetailsVM.usageStatViewModel.startTime = destinationStartTime
+                fruitsDetailsVC.fruitDetailsVM = fruitDetailsVM
             }
         }
         

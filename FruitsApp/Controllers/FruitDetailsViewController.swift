@@ -15,8 +15,9 @@ class FruitDetailsViewController: UIViewController {
     @IBOutlet weak var weightTitleLabel: UILabel!
     @IBOutlet weak var weightDetailsLabel: UILabel!
     
-    var fruitVM:FruitViewModel?
-    
+    var fruitDetailsVM:FruitDetailsViewModel?
+    var usageStatViewModel = UsageStatViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
@@ -24,7 +25,7 @@ class FruitDetailsViewController: UIViewController {
 
     private func setUpUI() {
         
-        if let fruitVM = self.fruitVM {
+        if let fruitVM = self.fruitDetailsVM?.fruitViewModel {
             self.view.backgroundColor = fruitVM.cellColor
             
             self.priceTitleLabel.text = fruitVM.priceTitle
@@ -44,9 +45,18 @@ class FruitDetailsViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let startTimeforView = self.fruitDetailsVM?.usageStatViewModel.startTime {
+            let data = (CACurrentMediaTime() - startTimeforView) * 1000.0
+            self.fruitDetailsVM?.usageStatViewModel.usageStat = UsageStat(event: .load, data: "\(data)")
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard let navBar = navigationController?.navigationBar, let fruitVM = self.fruitVM else {
+        guard let navBar = navigationController?.navigationBar, let fruitVM = self.fruitDetailsVM?.fruitViewModel else {
             fatalError("Navigation controller does not exist.")
         }
         navBar.backgroundColor = fruitVM.cellColor

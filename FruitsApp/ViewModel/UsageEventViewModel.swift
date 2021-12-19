@@ -19,6 +19,10 @@ struct UsageStatViewModel {
         }
     }
 
+    var startTime:CFTimeInterval?
+    var loadTime:CFTimeInterval?
+    
+    
     var url:URL?{
         guard let usageStat = self.usageStat else {
             return nil
@@ -47,7 +51,7 @@ extension UsageStatViewModel {
                 case .success(_):
                     print("Success")
                 case .failure(let error):
-                    print(error.errorDescription)
+                    print("Error sending usage stats \(error.errorDescription ?? "No error description")")
                 }
                 
             }

@@ -43,6 +43,8 @@ struct Resource<T:Codable> {
 class WebService {
     func sendRequest<T>(resource:Resource<T>, completion:@escaping (Result<T,NetworkError>)->Void) {
         
+        print("sending request to url: \(resource.url)")
+        
         URLSession.shared.dataTask(with: resource.url) { (data, response, error) in
             DispatchQueue.main.async{
                 guard error == nil else {
