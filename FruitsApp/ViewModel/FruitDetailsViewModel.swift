@@ -10,6 +10,4 @@ import Foundation
 struct FruitDetailsViewModel {
     var usageStatViewModel = UsageStatViewModel()
     var fruitViewModel:FruitViewModel
-    
-    
 }

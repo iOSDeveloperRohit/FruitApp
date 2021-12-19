@@ -11,7 +11,6 @@ import ChameleonFramework
 
 struct FruitList: Codable {
     let fruitsList:[Fruit]
-    
     enum CodingKeys: String, CodingKey {
       case fruitsList = "fruit"
     }
@@ -24,4 +23,8 @@ struct Fruit:Codable {
     
     // Assigned a value. Will not be decoded
     let cellColor = UIColor.randomFlat().hexValue()
+    
+    enum CodingKeys: Any, CodingKey {
+      case type,price,weight
+    }
 }

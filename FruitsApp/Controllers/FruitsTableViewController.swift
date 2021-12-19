@@ -9,7 +9,10 @@ import UIKit
 import ChameleonFramework
 
 class FruitsTableViewController: UITableViewController {
+    // IBOulets
     @IBOutlet var fruitsTableView: UITableView!
+    // Cell Identifier
+    private let cellIdentifier = "fruitsTableViewCell"
     var fruitsListVM = FruitListViewModel()
     var usageStatViewModel = UsageStatViewModel()
     // Activity indicator
@@ -34,14 +37,6 @@ class FruitsTableViewController: UITableViewController {
         self.populateFruits()
     }
 
-    func setUpUI() {
-        self.view.addSubview(activityIndicatorView)
-        self.fruitsTableView.addSubview(fruitsRefreshControl)
-        // apply constraints
-        self.activityIndicatorView.center = self.view.center
-        self.fruitsTableView.rowHeight = 80.0
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard let navBar = navigationController?.navigationBar else {
@@ -52,6 +47,23 @@ class FruitsTableViewController: UITableViewController {
         self.title = "FruitApp"
     }
     
+    // MARK: - Setup UI
+    private func setUpUI() {
+        self.view.addSubview(activityIndicatorView)
+        self.fruitsTableView.addSubview(fruitsRefreshControl)
+        // apply constraints
+        self.activityIndicatorView.center = self.view.center
+        self.fruitsTableView.rowHeight = 80.0
+    }
+    
+    //MARK: Refresh Control
+    @objc private func handleProductRefresh(_ refreshControl: UIRefreshControl) {
+        self.fruitsTableView.alpha = 0.5
+        self.populateFruits()
+    }
+    
+    
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showFruitsDetails" {
             let destinationStartTime = CACurrentMediaTime()
@@ -119,7 +131,7 @@ extension FruitsTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let fruitVM = self.fruitsListVM.fruitVMAt(index: indexPath.row)
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FruitsTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath)
         cell.textLabel?.text = fruitVM.name
         
         // Use Framework to set random colors
@@ -128,12 +140,4 @@ extension FruitsTableViewController {
         
         return cell
     }
-    
-    
-    //MARK: Refresh Control
-    @objc private func handleProductRefresh(_ refreshControl: UIRefreshControl) {
-        self.fruitsTableView.alpha = 0.5
-        self.populateFruits()
-    }
-    
 }

@@ -39,13 +39,15 @@ extension FruitListViewModel:ObservableObject {
         }
         let fruitResource = Resource<FruitList>(url: url)
         
-        let startTime = CACurrentMediaTime();
+        self.usageStatViewModel.startTime = CACurrentMediaTime();
 
         WebService().sendRequest(resource: fruitResource) {[unowned self] (result) in
             switch result {
             case .success(let fruits):
-                let data = (CACurrentMediaTime() - startTime) * 1000.0
-                self.usageStatViewModel.usageStat = UsageStat(event: UsageEventType.load, data: "\(data)")
+                self.usageStatViewModel.loadTime = CACurrentMediaTime()
+                if let data = self.usageStatViewModel.data {
+                    self.usageStatViewModel.usageStat = UsageStat(event: .load, data: data)
+                }
                 print(fruits)
                 self.fruitViewModels = fruits.fruitsList.map{(FruitViewModel.init(fruit: $0))}
                 completion(.success(true))

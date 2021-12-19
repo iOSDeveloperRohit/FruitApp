@@ -16,25 +16,29 @@ extension FruitViewModel {
     var name:String {
         return fruit.type.capitalized
     }
+    
+    //To display price in Pounds
     var price:String {
         let priceInPounds = Double(fruit.price)/100
         return (String(format: "£%.2f", priceInPounds))
     }
+    
+    // To display weight in KG
     var weight:String {
         let weightInKG = Double(fruit.weight)/1000
         return (String(format: "%.3f KG", weightInKG))
     }
     
     var priceTitle:String {
-        return "\(self.name) price in pounds"
+         "\(self.name) price in pounds"
     }
     
     var weightTitle:String {
-        return "\(self.name) weight in KG"
+         "\(self.name) weight in KG"
     }
     
     var cellColor:UIColor {
         //Assign a random color if not already presnt
-        return UIColor(hexString: fruit.cellColor) ?? UIColor.randomFlat()
+         UIColor(hexString: fruit.cellColor) ?? UIColor.randomFlat()
     }
 }

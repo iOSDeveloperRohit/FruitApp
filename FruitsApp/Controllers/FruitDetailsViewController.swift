@@ -10,24 +10,50 @@ import ChameleonFramework
 
 class FruitDetailsViewController: UIViewController {
 
+    //IBOulets
     @IBOutlet weak var priceTitleLabel: UILabel!
     @IBOutlet weak var priceDetailsLabel: UILabel!
     @IBOutlet weak var weightTitleLabel: UILabel!
     @IBOutlet weak var weightDetailsLabel: UILabel!
     
     var fruitDetailsVM:FruitDetailsViewModel?
-    var usageStatViewModel = UsageStatViewModel()
+    private var usageStatViewModel = UsageStatViewModel()
 
+    // MARK: - View Controller life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
     }
-
-    private func setUpUI() {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        if let _ = self.fruitDetailsVM?.usageStatViewModel {
+            self.fruitDetailsVM?.usageStatViewModel.loadTime = CACurrentMediaTime()
+            if let data = self.fruitDetailsVM?.usageStatViewModel.data {
+                self.fruitDetailsVM?.usageStatViewModel.usageStat = UsageStat(event: .display, data: data)
+            }
+            
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let navBar = navigationController?.navigationBar, let fruitVM = self.fruitDetailsVM?.fruitViewModel else {
+            fatalError("Navigation controller does not exist.")
+        }
+        navBar.backgroundColor = fruitVM.cellColor
+        navBar.tintColor = ContrastColorOf(fruitVM.cellColor, returnFlat: true)
+        navBar.barTintColor = ContrastColorOf(fruitVM.cellColor, returnFlat: true)
+        navBar.prefersLargeTitles = true
+        navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: ContrastColorOf(fruitVM.cellColor, returnFlat: true)]
+        self.title = fruitVM.name
+    }
+    
+    // MARK: - Setup UI based on data
+    private func setUpUI() {
         if let fruitVM = self.fruitDetailsVM?.fruitViewModel {
             self.view.backgroundColor = fruitVM.cellColor
-            
             self.priceTitleLabel.text = fruitVM.priceTitle
             self.priceDetailsLabel.text = fruitVM.price
             
@@ -44,28 +70,4 @@ class FruitDetailsViewController: UIViewController {
 
         }
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if let startTimeforView = self.fruitDetailsVM?.usageStatViewModel.startTime {
-            let data = (CACurrentMediaTime() - startTimeforView) * 1000.0
-            self.fruitDetailsVM?.usageStatViewModel.usageStat = UsageStat(event: .load, data: "\(data)")
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        guard let navBar = navigationController?.navigationBar, let fruitVM = self.fruitDetailsVM?.fruitViewModel else {
-            fatalError("Navigation controller does not exist.")
-        }
-        navBar.backgroundColor = fruitVM.cellColor
-        navBar.tintColor = ContrastColorOf(fruitVM.cellColor, returnFlat: true)
-        navBar.barTintColor = ContrastColorOf(fruitVM.cellColor, returnFlat: true)
-        navBar.prefersLargeTitles = true
-        navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: ContrastColorOf(fruitVM.cellColor, returnFlat: true)]
-
-        self.title = fruitVM.name
-    }
-    
 }

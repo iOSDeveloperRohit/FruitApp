@@ -22,7 +22,15 @@ struct UsageStatViewModel {
     var startTime:CFTimeInterval?
     var loadTime:CFTimeInterval?
     
+    var data:String? {
+        guard let startTime = self.startTime, let loadTime = self.loadTime else {
+            return nil
+        }
+        let data = (loadTime - startTime) * 1000.0
+        return "\(data)"
+    }
     
+    // URL Builder
     var url:URL?{
         guard let usageStat = self.usageStat else {
             return nil
@@ -41,19 +49,18 @@ struct UsageStatViewModel {
     
 }
 
+// Send usage to server
 extension UsageStatViewModel {
     func sendUsageDataToServer() {
         if let url = self.url {
             let resource = Resource<UsageStat>(url: url)
             WebService().sendRequest(resource: resource) { (result) in
-                
                 switch result {
                 case .success(_):
                     print("Success")
                 case .failure(let error):
                     print("Error sending usage stats \(error.errorDescription ?? "No error description")")
                 }
-                
             }
         } else {
             print("Url cannot be formed")
