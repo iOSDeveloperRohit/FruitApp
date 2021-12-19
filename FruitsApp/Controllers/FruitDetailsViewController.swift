@@ -6,15 +6,16 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class FruitDetailsViewController: UIViewController {
 
     @IBOutlet weak var priceTitleLabel: UILabel!
     @IBOutlet weak var priceDetailsLabel: UILabel!
-    @IBOutlet weak var weightTitleDetails: UILabel!
+    @IBOutlet weak var weightTitleLabel: UILabel!
     @IBOutlet weak var weightDetailsLabel: UILabel!
     
-    var friutVM:FruitViewModel?
+    var fruitVM:FruitViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +24,36 @@ class FruitDetailsViewController: UIViewController {
 
     private func setUpUI() {
         
-        if let fruitVM = self.friutVM {
+        if let fruitVM = self.fruitVM {
+            self.view.backgroundColor = fruitVM.cellColor
+            
             self.priceTitleLabel.text = fruitVM.priceTitle
             self.priceDetailsLabel.text = fruitVM.price
             
-            self.weightTitleDetails.text = fruitVM.weightTitle
+            self.weightTitleLabel.text = fruitVM.weightTitle
             self.weightDetailsLabel.text = fruitVM.weight
             
+            let titleLabelColor = ContrastColorOf(fruitVM.cellColor, returnFlat: false)
+            let detailLabelColor = ContrastColorOf(fruitVM.cellColor, returnFlat: false)
+            
+            self.priceTitleLabel.textColor = titleLabelColor
+            self.priceDetailsLabel.textColor = detailLabelColor
+            self.weightTitleLabel.textColor = titleLabelColor
+            self.weightDetailsLabel.textColor = detailLabelColor
+
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let navBar = navigationController?.navigationBar, let fruitVM = self.fruitVM else {
+            fatalError("Navigation controller does not exist.")
+        }
+        navBar.backgroundColor = fruitVM.cellColor
+        navBar.prefersLargeTitles = true
+        navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: ContrastColorOf(fruitVM.cellColor, returnFlat: true)]
+
+        self.title = fruitVM.name
     }
     
 }

@@ -52,7 +52,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="BQ7-na-OPL">
-                                <rect key="frame" x="20" y="108" width="374" height="127"/>
+                                <rect key="frame" x="20" y="160" width="374" height="127"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="MFF-Hs-AhE">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50.5"/>
@@ -104,7 +104,7 @@
                         <outlet property="priceDetailsLabel" destination="Hqa-m2-sc9" id="zLg-HT-fOs"/>
                         <outlet property="priceTitleLabel" destination="7TA-Bu-chk" id="9WN-cp-c4h"/>
                         <outlet property="weightDetailsLabel" destination="cR6-bv-JIk" id="noy-iy-k0g"/>
-                        <outlet property="weightTitleDetails" destination="M10-Ag-vav" id="nqp-g7-EiW"/>
+                        <outlet property="weightTitleLabel" destination="M10-Ag-vav" id="nqp-g7-EiW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLg-tu-heu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -116,8 +116,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cko-mt-rnb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wAG-1J-wuh">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="wAG-1J-wuh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

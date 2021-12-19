@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class FruitsTableViewController: UITableViewController {
     @IBOutlet var fruitsTableView: UITableView!
@@ -39,6 +40,16 @@ class FruitsTableViewController: UITableViewController {
         self.fruitsTableView.addSubview(fruitsRefreshControl)
         // apply constraints
         self.activityIndicatorView.center = self.view.center
+        self.fruitsTableView.rowHeight = 80.0
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let navBar = navigationController?.navigationBar else {
+            fatalError("Navigation controller does not exist.")
+        }
+        navBar.backgroundColor = UIColor(hexString: "#1D9BF6")
+        navBar.prefersLargeTitles = true
+        self.title = "FruitApp"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -49,7 +60,7 @@ class FruitsTableViewController: UITableViewController {
                 return
             }
             if let selectedIndex = self.tableView.indexPathForSelectedRow?.row {
-                fruitsDetailsVC.friutVM = self.fruitsListVM.fruitVMAt(index: selectedIndex)
+                fruitsDetailsVC.fruitVM = self.fruitsListVM.fruitVMAt(index: selectedIndex)
             }
         }
         
@@ -112,6 +123,10 @@ extension FruitsTableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FruitsTableViewCell", for: indexPath)
         cell.textLabel?.text = fruitVM.name
+        
+        // Use Framework to set random colors
+        cell.backgroundColor = fruitVM.cellColor
+        cell.textLabel?.textColor = ContrastColorOf(fruitVM.cellColor, returnFlat: true)
         
         return cell
     }

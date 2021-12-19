@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+import UIKit
+import ChameleonFramework
 
 class FruitListViewModel {
     
@@ -52,5 +53,10 @@ extension FruitViewModel {
     
     var weightTitle:String {
         return "\(self.name) weight in KG"
+    }
+    
+    var cellColor:UIColor {
+        //Assign a random color if not already presnt
+        return UIColor(hexString: fruit.cellColor) ?? UIColor.randomFlat()
     }
 }

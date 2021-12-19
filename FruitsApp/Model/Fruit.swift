@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+import ChameleonFramework
 
 struct FruitList: Codable {
     let fruitsList:[Fruit]
@@ -19,4 +21,7 @@ struct Fruit:Codable {
     let type:String
     let price:Int
     let weight:Int
+    
+    // Assigned a value. Will not be decoded
+    let cellColor = UIColor.randomFlat().hexValue()
 }
