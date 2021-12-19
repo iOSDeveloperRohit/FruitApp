@@ -50,6 +50,8 @@ class FruitDetailsViewController: UIViewController {
             fatalError("Navigation controller does not exist.")
         }
         navBar.backgroundColor = fruitVM.cellColor
+        navBar.tintColor = ContrastColorOf(fruitVM.cellColor, returnFlat: true)
+        navBar.barTintColor = ContrastColorOf(fruitVM.cellColor, returnFlat: true)
         navBar.prefersLargeTitles = true
         navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: ContrastColorOf(fruitVM.cellColor, returnFlat: true)]
 

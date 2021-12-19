@@ -10,9 +10,29 @@ import Foundation
 enum NetworkError: Error {
     case invalidResponse
     case noData
-    case failedRequest
     case invalidData
     case urlError
+    case serviceError(String)
+    case failedRequest(Int)
+}
+
+extension NetworkError {
+    public var errorDescription: String? {
+        switch self {
+        case .invalidResponse:
+            return "Unable to process response"
+        case .noData:
+            return "Service did not receive any data."
+        case .invalidData:
+            return "Failed to parse the data."
+        case .urlError:
+            return "Url cannot be formed."
+        case .serviceError(let message):
+            return message
+        case .failedRequest(let statusCode):
+            return "Service returned invalid response code: \(statusCode)."
+        }
+    }
 }
 
 // Generic Resource which can be used to load any Jason from received from Server
@@ -27,7 +47,7 @@ class WebService {
             DispatchQueue.main.async{
                 guard error == nil else {
                   print("Failed request from \(resource.url): \(error!.localizedDescription)")
-                    completion(.failure(.failedRequest))
+                    completion(.failure(NetworkError.serviceError(error?.localizedDescription ?? "")))
                   return
                 }
                 
@@ -45,7 +65,7 @@ class WebService {
                 
                 guard response.statusCode == 200 else {
                     print("Failure response from \(resource.url): \(response.statusCode)")
-                    completion(.failure(.failedRequest))
+                    completion(.failure(NetworkError.failedRequest(response.statusCode)))
                   return
                 }
                 // Try parsing data with generic class and catch the error
