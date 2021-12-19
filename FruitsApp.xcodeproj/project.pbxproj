@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B79B0C76A67A00CA77FB588 /* Pods_FruitsApp_FruitsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE32D83365B828B2B9BC0C12 /* Pods_FruitsApp_FruitsAppUITests.framework */; };
+		51C25605F1108985A0C05A6F /* Pods_FruitsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CDA14F8F5C455ED8244928 /* Pods_FruitsAppTests.framework */; };
+		E93F5DC462ECC776534BA935 /* Pods_FruitsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6051E67A692457BBBDFFC286 /* Pods_FruitsApp.framework */; };
 		F91E9731276E4E15009A2EE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9730276E4E15009A2EE7 /* AppDelegate.swift */; };
 		F91E9733276E4E15009A2EE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9732276E4E15009A2EE7 /* SceneDelegate.swift */; };
 		F91E9735276E4E15009A2EE7 /* FruitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9734276E4E15009A2EE7 /* FruitsTableViewController.swift */; };
@@ -42,6 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24F93DD1EFCD2AA549369E15 /* Pods-FruitsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitsApp.debug.xcconfig"; path = "Target Support Files/Pods-FruitsApp/Pods-FruitsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		6051E67A692457BBBDFFC286 /* Pods_FruitsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FruitsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6657672C92B55255379764B8 /* Pods-FruitsApp-FruitsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitsApp-FruitsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-FruitsApp-FruitsAppUITests/Pods-FruitsApp-FruitsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		78CDA14F8F5C455ED8244928 /* Pods_FruitsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FruitsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9696BD416B1A84E8C5AA3A6F /* Pods-FruitsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-FruitsAppTests/Pods-FruitsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE32D83365B828B2B9BC0C12 /* Pods_FruitsApp_FruitsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FruitsApp_FruitsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D11CCA8D9828AD1CD6BE7395 /* Pods-FruitsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitsAppTests.release.xcconfig"; path = "Target Support Files/Pods-FruitsAppTests/Pods-FruitsAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		E1FD82248240DB2911A1D65D /* Pods-FruitsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitsApp.release.xcconfig"; path = "Target Support Files/Pods-FruitsApp/Pods-FruitsApp.release.xcconfig"; sourceTree = "<group>"; };
+		EE0943BDC7AE194CA3F39C24 /* Pods-FruitsApp-FruitsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitsApp-FruitsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-FruitsApp-FruitsAppUITests/Pods-FruitsApp-FruitsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F91E972D276E4E15009A2EE7 /* FruitsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91E9730276E4E15009A2EE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F91E9732276E4E15009A2EE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E93F5DC462ECC776534BA935 /* Pods_FruitsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51C25605F1108985A0C05A6F /* Pods_FruitsAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,12 +95,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B79B0C76A67A00CA77FB588 /* Pods_FruitsApp_FruitsAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD1E1C29CE9C768116197626 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24F93DD1EFCD2AA549369E15 /* Pods-FruitsApp.debug.xcconfig */,
+				E1FD82248240DB2911A1D65D /* Pods-FruitsApp.release.xcconfig */,
+				EE0943BDC7AE194CA3F39C24 /* Pods-FruitsApp-FruitsAppUITests.debug.xcconfig */,
+				6657672C92B55255379764B8 /* Pods-FruitsApp-FruitsAppUITests.release.xcconfig */,
+				9696BD416B1A84E8C5AA3A6F /* Pods-FruitsAppTests.debug.xcconfig */,
+				D11CCA8D9828AD1CD6BE7395 /* Pods-FruitsAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D70E467CA4EBFC8E90864417 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6051E67A692457BBBDFFC286 /* Pods_FruitsApp.framework */,
+				AE32D83365B828B2B9BC0C12 /* Pods_FruitsApp_FruitsAppUITests.framework */,
+				78CDA14F8F5C455ED8244928 /* Pods_FruitsAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F91E9724276E4E15009A2EE7 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +133,8 @@
 				F91E9746276E4E18009A2EE7 /* FruitsAppTests */,
 				F91E9751276E4E18009A2EE7 /* FruitsAppUITests */,
 				F91E972E276E4E15009A2EE7 /* Products */,
+				BD1E1C29CE9C768116197626 /* Pods */,
+				D70E467CA4EBFC8E90864417 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F91E9757276E4E18009A2EE7 /* Build configuration list for PBXNativeTarget "FruitsApp" */;
 			buildPhases = (
+				A9680E5D8909ADF678F70940 /* [CP] Check Pods Manifest.lock */,
 				F91E9729276E4E15009A2EE7 /* Sources */,
 				F91E972A276E4E15009A2EE7 /* Frameworks */,
 				F91E972B276E4E15009A2EE7 /* Resources */,
+				F1A297EAAB9E2937758497EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,6 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F91E975A276E4E18009A2EE7 /* Build configuration list for PBXNativeTarget "FruitsAppTests" */;
 			buildPhases = (
+				C66BC1ECA4AB3F4595780F37 /* [CP] Check Pods Manifest.lock */,
 				F91E973F276E4E18009A2EE7 /* Sources */,
 				F91E9740276E4E18009A2EE7 /* Frameworks */,
 				F91E9741276E4E18009A2EE7 /* Resources */,
@@ -217,9 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F91E975D276E4E18009A2EE7 /* Build configuration list for PBXNativeTarget "FruitsAppUITests" */;
 			buildPhases = (
+				333818173B34EA0AB2D38A59 /* [CP] Check Pods Manifest.lock */,
 				F91E974A276E4E18009A2EE7 /* Sources */,
 				F91E974B276E4E18009A2EE7 /* Frameworks */,
 				F91E974C276E4E18009A2EE7 /* Resources */,
+				80FD23162C5BC218927A1E28 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,6 +345,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		333818173B34EA0AB2D38A59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FruitsApp-FruitsAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80FD23162C5BC218927A1E28 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FruitsApp-FruitsAppUITests/Pods-FruitsApp-FruitsAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FruitsApp-FruitsAppUITests/Pods-FruitsApp-FruitsAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FruitsApp-FruitsAppUITests/Pods-FruitsApp-FruitsAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9680E5D8909ADF678F70940 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FruitsApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C66BC1ECA4AB3F4595780F37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FruitsAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1A297EAAB9E2937758497EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FruitsApp/Pods-FruitsApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FruitsApp/Pods-FruitsApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FruitsApp/Pods-FruitsApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F91E9729276E4E15009A2EE7 /* Sources */ = {
@@ -487,6 +636,7 @@
 		};
 		F91E9758276E4E18009A2EE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24F93DD1EFCD2AA549369E15 /* Pods-FruitsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -505,6 +655,7 @@
 		};
 		F91E9759276E4E18009A2EE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1FD82248240DB2911A1D65D /* Pods-FruitsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -523,6 +674,7 @@
 		};
 		F91E975B276E4E18009A2EE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9696BD416B1A84E8C5AA3A6F /* Pods-FruitsAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -544,6 +696,7 @@
 		};
 		F91E975C276E4E18009A2EE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D11CCA8D9828AD1CD6BE7395 /* Pods-FruitsAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -565,6 +718,7 @@
 		};
 		F91E975E276E4E18009A2EE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE0943BDC7AE194CA3F39C24 /* Pods-FruitsApp-FruitsAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -584,6 +738,7 @@
 		};
 		F91E975F276E4E18009A2EE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6657672C92B55255379764B8 /* Pods-FruitsApp-FruitsAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
