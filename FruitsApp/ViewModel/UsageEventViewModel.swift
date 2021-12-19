@@ -47,7 +47,7 @@ extension UsageStatViewModel {
                 case .success(_):
                     print("Success")
                 case .failure(let error):
-                    print(error.localizedDescription)
+                    print(error.errorDescription)
                 }
                 
             }

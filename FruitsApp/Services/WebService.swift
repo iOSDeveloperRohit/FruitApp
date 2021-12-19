@@ -10,7 +10,7 @@ import Foundation
 enum NetworkError: Error {
     case invalidResponse
     case noData
-    case invalidData
+    case invalidData(String)
     case urlError
     case serviceError(String)
     case failedRequest(Int)
@@ -23,8 +23,8 @@ extension NetworkError {
             return "Unable to process response"
         case .noData:
             return "Service did not receive any data."
-        case .invalidData:
-            return "Failed to parse the data."
+        case .invalidData(let message):
+            return "Failed to parse the data with error \(message)."
         case .urlError:
             return "Url cannot be formed."
         case .serviceError(let message):
@@ -74,8 +74,7 @@ class WebService {
                     completion(.success(result))
                 } catch {
                     print("Unable to decode \(resource.url) response: \(error.localizedDescription)")
-                    completion(.failure(.invalidData))
-
+                    completion(.failure(.invalidData(error.localizedDescription)))
                 }
             }
         }.resume()

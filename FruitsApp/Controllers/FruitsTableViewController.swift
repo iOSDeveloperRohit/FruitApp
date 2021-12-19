@@ -84,13 +84,13 @@ class FruitsTableViewController: UITableViewController {
                     self.fruitsTableView.reloadData()
                 case .failure(let error):
                     print(error)
-                    let alert = UIAlertController(title: "Error retriving data, Do you wish to retry?", message: error.localizedDescription, preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Error retriving data, Do you wish to retry?", message: error.errorDescription, preferredStyle: .alert)
                     let doneAction = UIAlertAction(title: "Retry", style: .default) { (action) in
                         self.populateFruits()
                     }
-                    let cancelAction = UIAlertAction(title: "No", style: .default,handler: nil)
-                    alert.addAction(doneAction)
+                    let cancelAction = UIAlertAction(title: "No", style: .cancel,handler: nil)
                     alert.addAction(cancelAction)
+                    alert.addAction(doneAction)
                     present(alert, animated: true)
                 }
                 self.stopRefreshAndActivityControl()

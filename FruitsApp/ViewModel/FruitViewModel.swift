@@ -51,7 +51,7 @@ extension FruitListViewModel:ObservableObject {
                 self.fruitViewModels = fruits.fruitsList.map{(FruitViewModel.init(fruit: $0))}
                 completion(.success(true))
             case .failure(let error):
-                self.usageStatViewModel.usageStat = UsageStat(event: UsageEventType.error, data: "\(error.localizedDescription)")
+                self.usageStatViewModel.usageStat = UsageStat(event: UsageEventType.error, data: "\(error.errorDescription ?? "")")
                 print(error)
                 completion(.failure(error))
             }
