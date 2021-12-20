@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum NetworkError: Error {
     case invalidResponse
@@ -40,12 +41,22 @@ struct Resource<T:Codable> {
     var url:URL
 }
 
-class WebService {
+protocol ServiceRequestable {
+    func sendRequest<T>(resource:Resource<T>, completion:@escaping (Result<T,NetworkError>)->Void)
+}
+
+class WebService: ServiceRequestable {
+    
+    private let urlSession: URLSession
+    init(session: URLSession = .shared) {
+        self.urlSession = session
+    }
+    
     func sendRequest<T>(resource:Resource<T>, completion:@escaping (Result<T,NetworkError>)->Void) {
         
         print("sending request to url: \(resource.url)")
         
-        URLSession.shared.dataTask(with: resource.url) { (data, response, error) in
+        urlSession.dataTask(with: resource.url) { (data, response, error) in
             DispatchQueue.main.async{
                 guard error == nil else {
                   print("Failed request from \(resource.url): \(error!.localizedDescription)")

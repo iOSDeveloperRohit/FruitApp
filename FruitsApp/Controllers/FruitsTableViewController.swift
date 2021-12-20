@@ -14,7 +14,7 @@ class FruitsTableViewController: UITableViewController {
     // Cell Identifier
     private let cellIdentifier = "fruitsTableViewCell"
     var fruitsListVM = FruitListViewModel()
-    var usageStatViewModel = UsageStatViewModel()
+    var usageStatViewModel = UsageStatViewModel(request: WebService())
     // Activity indicator
     private let activityIndicatorView: UIActivityIndicatorView = {
         let actView = UIActivityIndicatorView(style: .large)

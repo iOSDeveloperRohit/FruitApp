@@ -8,6 +8,6 @@
 import Foundation
 
 struct FruitDetailsViewModel {
-    var usageStatViewModel = UsageStatViewModel()
+    var usageStatViewModel = UsageStatViewModel(request: WebService())
     var fruitViewModel:FruitViewModel
 }

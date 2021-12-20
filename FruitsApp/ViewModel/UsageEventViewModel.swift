@@ -12,7 +12,11 @@ struct UsageStatViewModel {
     
     private static let host = "raw.githubusercontent.com"
     private static let path = "/fmtvp/recruit-test-data/master/stats"
-    
+    private let requestable: ServiceRequestable
+    // MARK: init
+    init(request: ServiceRequestable) {
+        requestable = request
+    }
     var usageStat:UsageStat? {
         didSet{
             self.sendUsageDataToServer()
@@ -54,7 +58,7 @@ extension UsageStatViewModel {
     func sendUsageDataToServer() {
         if let url = self.url {
             let resource = Resource<UsageStat>(url: url)
-            WebService().sendRequest(resource: resource) { (result) in
+            requestable.sendRequest(resource: resource) { (result) in
                 switch result {
                 case .success(_):
                     print("Success")

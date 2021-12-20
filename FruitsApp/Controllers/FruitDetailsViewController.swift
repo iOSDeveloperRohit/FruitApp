@@ -17,7 +17,7 @@ class FruitDetailsViewController: UIViewController {
     @IBOutlet weak var weightDetailsLabel: UILabel!
     
     var fruitDetailsVM:FruitDetailsViewModel?
-    private var usageStatViewModel = UsageStatViewModel()
+    private var usageStatViewModel = UsageStatViewModel(request: WebService())
 
     // MARK: - View Controller life cycle
     override func viewDidLoad() {

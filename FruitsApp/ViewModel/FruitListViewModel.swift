@@ -9,7 +9,7 @@ import Foundation
 import ChameleonFramework
 
 class FruitListViewModel {
-    var usageStatViewModel = UsageStatViewModel()
+    var usageStatViewModel = UsageStatViewModel(request: WebService())
 
     static let fruitsURL = "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/data.json"
    
