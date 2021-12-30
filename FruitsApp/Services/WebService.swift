@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum NetworkError: Error {
+enum NetworkError: Error, Equatable {
     case invalidResponse
     case noData
     case invalidData(String)
@@ -17,7 +17,7 @@ enum NetworkError: Error {
     case failedRequest(Int)
 }
 
-extension NetworkError {
+extension NetworkError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .invalidResponse:
@@ -64,21 +64,9 @@ class WebService: ServiceRequestable {
                   return
                 }
                 
-                guard let data = data else {
+                guard let data = data, data.count != 0 else {
                   print("No data returned from \(resource.url)")
                     completion(.failure(.noData))
-                  return
-                }
-                
-                guard let response = response as? HTTPURLResponse else {
-                    print("Unable to process \(resource.url) response")
-                    completion(.failure(.invalidResponse))
-                  return
-                }
-                
-                guard response.statusCode == 200 else {
-                    print("Failure response from \(resource.url): \(response.statusCode)")
-                    completion(.failure(NetworkError.failedRequest(response.statusCode)))
                   return
                 }
                 // Try parsing data with generic class and catch the error

@@ -39,6 +39,6 @@ extension FruitViewModel {
     
     var cellColor:UIColor {
         //Assign a random color if not already presnt
-         UIColor(hexString: fruit.cellColor) ?? UIColor.randomFlat()
+         UIColor(hexString: fruit.cellColor)!
     }
 }

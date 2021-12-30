@@ -14,6 +14,13 @@ struct FruitList: Codable {
     enum CodingKeys: String, CodingKey {
       case fruitsList = "fruit"
     }
+    
+    // MARK: - init
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let allPrdoucts = try container.decode([Fruit].self, forKey: .fruitsList)
+        self.fruitsList = allPrdoucts
+    }
 }
 
 struct Fruit:Codable {

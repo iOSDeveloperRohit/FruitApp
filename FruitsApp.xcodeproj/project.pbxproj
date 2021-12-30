@@ -10,6 +10,7 @@
 		29972913541AAED57EE2CEC4 /* Pods_FruitsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F39A39DC1BAC22051F9738 /* Pods_FruitsAppTests.framework */; };
 		4BD0B743DA044A44DFBF18C3 /* Pods_FruitsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADE5374BA3D0B523D7C8900 /* Pods_FruitsApp.framework */; };
 		BD51DB3DF61744556B4F1C15 /* Pods_FruitsApp_FruitsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B72DB68263217FAF84F32E /* Pods_FruitsApp_FruitsAppUITests.framework */; };
+		F901CD44277CD95600B097F0 /* FakeFruitListmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F901CD43277CD95600B097F0 /* FakeFruitListmodel.swift */; };
 		F91E9731276E4E15009A2EE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9730276E4E15009A2EE7 /* AppDelegate.swift */; };
 		F91E9733276E4E15009A2EE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9732276E4E15009A2EE7 /* SceneDelegate.swift */; };
 		F91E9735276E4E15009A2EE7 /* FruitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9734276E4E15009A2EE7 /* FruitsTableViewController.swift */; };
@@ -24,13 +25,18 @@
 		F91E977A276E5789009A2EE7 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9778276E5789009A2EE7 /* Fruit.swift */; };
 		F91E977F276E5842009A2EE7 /* FruitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E977E276E5842009A2EE7 /* FruitViewModel.swift */; };
 		F91E9780276E5842009A2EE7 /* FruitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E977E276E5842009A2EE7 /* FruitViewModel.swift */; };
+		F98BA6E4277CBF80006D8C36 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98BA6E3277CBF80006D8C36 /* MockURLProtocol.swift */; };
 		F9C6B8CD276F77E40018061D /* FruitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6B8CC276F77E40018061D /* FruitListViewModel.swift */; };
 		F9C6B8CE276F77E40018061D /* FruitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6B8CC276F77E40018061D /* FruitListViewModel.swift */; };
 		F9C6B8D3276F78080018061D /* FruitDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6B8D2276F78080018061D /* FruitDetailsViewModel.swift */; };
 		F9C6B8D4276F78080018061D /* FruitDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C6B8D2276F78080018061D /* FruitDetailsViewModel.swift */; };
+		F9E6C637277C70E100EEA8DC /* UsageStatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E79293276E843D00232632 /* UsageStatViewModel.swift */; };
+		F9E6C642277C70FE00EEA8DC /* UsageStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7928E276E835F00232632 /* UsageStat.swift */; };
+		F9E6C647277C73F800EEA8DC /* FruitViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E6C646277C73F800EEA8DC /* FruitViewModelTest.swift */; };
+		F9E6C656277C9C3100EEA8DC /* WebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E6C655277C9C3100EEA8DC /* WebServiceTest.swift */; };
 		F9E79289276E670B00232632 /* FruitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E79288276E670B00232632 /* FruitDetailsViewController.swift */; };
 		F9E7928F276E835F00232632 /* UsageStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7928E276E835F00232632 /* UsageStat.swift */; };
-		F9E79294276E843D00232632 /* UsageEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E79293276E843D00232632 /* UsageEventViewModel.swift */; };
+		F9E79294276E843D00232632 /* UsageStatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E79293276E843D00232632 /* UsageStatViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +66,7 @@
 		81B72DB68263217FAF84F32E /* Pods_FruitsApp_FruitsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FruitsApp_FruitsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CA2BFF9AF81E35E5F6DDB7 /* Pods-FruitsApp-FruitsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitsApp-FruitsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-FruitsApp-FruitsAppUITests/Pods-FruitsApp-FruitsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EADE5374BA3D0B523D7C8900 /* Pods_FruitsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FruitsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F901CD43277CD95600B097F0 /* FakeFruitListmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFruitListmodel.swift; sourceTree = "<group>"; };
 		F91E972D276E4E15009A2EE7 /* FruitsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91E9730276E4E15009A2EE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F91E9732276E4E15009A2EE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,11 +84,14 @@
 		F91E976F276E4F93009A2EE7 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		F91E9778276E5789009A2EE7 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		F91E977E276E5842009A2EE7 /* FruitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewModel.swift; sourceTree = "<group>"; };
+		F98BA6E3277CBF80006D8C36 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		F9C6B8CC276F77E40018061D /* FruitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListViewModel.swift; sourceTree = "<group>"; };
 		F9C6B8D2276F78080018061D /* FruitDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailsViewModel.swift; sourceTree = "<group>"; };
+		F9E6C646277C73F800EEA8DC /* FruitViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewModelTest.swift; sourceTree = "<group>"; };
+		F9E6C655277C9C3100EEA8DC /* WebServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTest.swift; sourceTree = "<group>"; };
 		F9E79288276E670B00232632 /* FruitDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailsViewController.swift; sourceTree = "<group>"; };
 		F9E7928E276E835F00232632 /* UsageStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStat.swift; sourceTree = "<group>"; };
-		F9E79293276E843D00232632 /* UsageEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageEventViewModel.swift; sourceTree = "<group>"; };
+		F9E79293276E843D00232632 /* UsageStatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +145,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F901CD42277CD93700B097F0 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				F901CD43277CD95600B097F0 /* FakeFruitListmodel.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
 		F91E9724276E4E15009A2EE7 = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +196,11 @@
 		F91E9746276E4E18009A2EE7 /* FruitsAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				F901CD42277CD93700B097F0 /* Fakes */,
+				F98BA6E2277CBF71006D8C36 /* Mocks */,
 				F91E9747276E4E18009A2EE7 /* FruitsAppTests.swift */,
+				F9E6C655277C9C3100EEA8DC /* WebServiceTest.swift */,
+				F9E6C646277C73F800EEA8DC /* FruitViewModelTest.swift */,
 				F91E9749276E4E18009A2EE7 /* Info.plist */,
 			);
 			path = FruitsAppTests;
@@ -206,7 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				F91E977E276E5842009A2EE7 /* FruitViewModel.swift */,
-				F9E79293276E843D00232632 /* UsageEventViewModel.swift */,
+				F9E79293276E843D00232632 /* UsageStatViewModel.swift */,
 				F9C6B8CC276F77E40018061D /* FruitListViewModel.swift */,
 				F9C6B8D2276F78080018061D /* FruitDetailsViewModel.swift */,
 			);
@@ -228,6 +250,14 @@
 				F9E79288276E670B00232632 /* FruitDetailsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F98BA6E2277CBF71006D8C36 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F98BA6E3277CBF80006D8C36 /* MockURLProtocol.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		F9E792A2276E9A1800232632 /* Extensions */ = {
@@ -485,7 +515,7 @@
 				F9E79289276E670B00232632 /* FruitDetailsViewController.swift in Sources */,
 				F91E9770276E4F93009A2EE7 /* WebService.swift in Sources */,
 				F91E9733276E4E15009A2EE7 /* SceneDelegate.swift in Sources */,
-				F9E79294276E843D00232632 /* UsageEventViewModel.swift in Sources */,
+				F9E79294276E843D00232632 /* UsageStatViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,8 +525,14 @@
 			files = (
 				F91E977A276E5789009A2EE7 /* Fruit.swift in Sources */,
 				F9C6B8CE276F77E40018061D /* FruitListViewModel.swift in Sources */,
+				F98BA6E4277CBF80006D8C36 /* MockURLProtocol.swift in Sources */,
 				F9C6B8D4276F78080018061D /* FruitDetailsViewModel.swift in Sources */,
+				F9E6C642277C70FE00EEA8DC /* UsageStat.swift in Sources */,
+				F901CD44277CD95600B097F0 /* FakeFruitListmodel.swift in Sources */,
+				F9E6C656277C9C3100EEA8DC /* WebServiceTest.swift in Sources */,
+				F9E6C647277C73F800EEA8DC /* FruitViewModelTest.swift in Sources */,
 				F91E9780276E5842009A2EE7 /* FruitViewModel.swift in Sources */,
+				F9E6C637277C70E100EEA8DC /* UsageStatViewModel.swift in Sources */,
 				F91E9771276E4F93009A2EE7 /* WebService.swift in Sources */,
 				F91E9748276E4E18009A2EE7 /* FruitsAppTests.swift in Sources */,
 			);
