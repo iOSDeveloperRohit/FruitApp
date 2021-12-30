@@ -21,6 +21,9 @@ class WebServiceTest: XCTestCase {
         let urlSession = URLSession(configuration: config)
         
         sut = WebService(session: urlSession)
+        if FruitListViewModel.fruitsURL == "" {
+            FruitListViewModel.fruitsURL = "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/data.json"
+        }
         guard let url = URL(string: FruitListViewModel.fruitsURL) else {
             return
         }
@@ -63,7 +66,7 @@ class WebServiceTest: XCTestCase {
     }
 
     
-    func testWebSErvice_sendRequestNetworkError_returnsErrorMessageDescription() {
+    func testWebService_sendRequestNetworkError_returnsErrorMessageDescription() {
         let expectation = self.expectation(description: "Expectation for webservice receiving the error.")
         let serviceError = NetworkError.serviceError("Some network error")
         MockURLProtocol.stubError = serviceError

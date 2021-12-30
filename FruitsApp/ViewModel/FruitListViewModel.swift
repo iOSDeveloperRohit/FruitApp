@@ -11,12 +11,15 @@ import ChameleonFramework
 class FruitListViewModel {
     var usageStatViewModel = UsageStatViewModel(request: WebService())
 
-    static let fruitsURL = "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/data.json"
+    static var fruitsURL = "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/data.json"
    
     var fruitViewModels:[FruitViewModel]
+
+    private let requestable: ServiceRequestable
     
-    init() {
+    init(request: ServiceRequestable = WebService()) {
         self.fruitViewModels = [FruitViewModel]()
+        self.requestable = request
     }
     
     func fruitVMAt(index:Int) -> FruitViewModel {
@@ -41,7 +44,7 @@ extension FruitListViewModel:ObservableObject {
         
         self.usageStatViewModel.startTime = CACurrentMediaTime();
 
-        WebService().sendRequest(resource: fruitResource) {[unowned self] (result) in
+        self.requestable.sendRequest(resource: fruitResource) {[unowned self] (result) in
             switch result {
             case .success(let fruits):
                 self.usageStatViewModel.loadTime = CACurrentMediaTime()

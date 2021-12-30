@@ -11,6 +11,8 @@
 		4BD0B743DA044A44DFBF18C3 /* Pods_FruitsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADE5374BA3D0B523D7C8900 /* Pods_FruitsApp.framework */; };
 		BD51DB3DF61744556B4F1C15 /* Pods_FruitsApp_FruitsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B72DB68263217FAF84F32E /* Pods_FruitsApp_FruitsAppUITests.framework */; };
 		F901CD44277CD95600B097F0 /* FakeFruitListmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F901CD43277CD95600B097F0 /* FakeFruitListmodel.swift */; };
+		F901CD56277DBBBE00B097F0 /* FruitListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F901CD55277DBBBE00B097F0 /* FruitListViewModelTest.swift */; };
+		F901CD5B277DBF7500B097F0 /* MockWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F901CD5A277DBF7500B097F0 /* MockWebservice.swift */; };
 		F91E9731276E4E15009A2EE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9730276E4E15009A2EE7 /* AppDelegate.swift */; };
 		F91E9733276E4E15009A2EE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9732276E4E15009A2EE7 /* SceneDelegate.swift */; };
 		F91E9735276E4E15009A2EE7 /* FruitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91E9734276E4E15009A2EE7 /* FruitsTableViewController.swift */; };
@@ -67,6 +69,8 @@
 		89CA2BFF9AF81E35E5F6DDB7 /* Pods-FruitsApp-FruitsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitsApp-FruitsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-FruitsApp-FruitsAppUITests/Pods-FruitsApp-FruitsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EADE5374BA3D0B523D7C8900 /* Pods_FruitsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FruitsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F901CD43277CD95600B097F0 /* FakeFruitListmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFruitListmodel.swift; sourceTree = "<group>"; };
+		F901CD55277DBBBE00B097F0 /* FruitListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListViewModelTest.swift; sourceTree = "<group>"; };
+		F901CD5A277DBF7500B097F0 /* MockWebservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWebservice.swift; sourceTree = "<group>"; };
 		F91E972D276E4E15009A2EE7 /* FruitsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91E9730276E4E15009A2EE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F91E9732276E4E15009A2EE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 				F91E9747276E4E18009A2EE7 /* FruitsAppTests.swift */,
 				F9E6C655277C9C3100EEA8DC /* WebServiceTest.swift */,
 				F9E6C646277C73F800EEA8DC /* FruitViewModelTest.swift */,
+				F901CD55277DBBBE00B097F0 /* FruitListViewModelTest.swift */,
 				F91E9749276E4E18009A2EE7 /* Info.plist */,
 			);
 			path = FruitsAppTests;
@@ -256,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				F98BA6E3277CBF80006D8C36 /* MockURLProtocol.swift */,
+				F901CD5A277DBF7500B097F0 /* MockWebservice.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -524,6 +530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F91E977A276E5789009A2EE7 /* Fruit.swift in Sources */,
+				F901CD56277DBBBE00B097F0 /* FruitListViewModelTest.swift in Sources */,
 				F9C6B8CE276F77E40018061D /* FruitListViewModel.swift in Sources */,
 				F98BA6E4277CBF80006D8C36 /* MockURLProtocol.swift in Sources */,
 				F9C6B8D4276F78080018061D /* FruitDetailsViewModel.swift in Sources */,
@@ -534,6 +541,7 @@
 				F91E9780276E5842009A2EE7 /* FruitViewModel.swift in Sources */,
 				F9E6C637277C70E100EEA8DC /* UsageStatViewModel.swift in Sources */,
 				F91E9771276E4F93009A2EE7 /* WebService.swift in Sources */,
+				F901CD5B277DBF7500B097F0 /* MockWebservice.swift in Sources */,
 				F91E9748276E4E18009A2EE7 /* FruitsAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
