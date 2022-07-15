@@ -9,6 +9,6 @@ import Foundation
 
 class GitBasics {
     
-    // TASK 1 completed
+    // TASK 2 completed
     
 }
