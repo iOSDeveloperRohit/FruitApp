@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		147E4DB42881ACD500FDECA7 /* GitBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147E4DB32881ACD500FDECA7 /* GitBasics.swift */; };
 		29972913541AAED57EE2CEC4 /* Pods_FruitsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F39A39DC1BAC22051F9738 /* Pods_FruitsAppTests.framework */; };
 		4BD0B743DA044A44DFBF18C3 /* Pods_FruitsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADE5374BA3D0B523D7C8900 /* Pods_FruitsApp.framework */; };
 		BD51DB3DF61744556B4F1C15 /* Pods_FruitsApp_FruitsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B72DB68263217FAF84F32E /* Pods_FruitsApp_FruitsAppUITests.framework */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		0AF4E18FA1F6F4BB3E112746 /* Pods-FruitsApp-FruitsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitsApp-FruitsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-FruitsApp-FruitsAppUITests/Pods-FruitsApp-FruitsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		147E4DB32881ACD500FDECA7 /* GitBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitBasics.swift; sourceTree = "<group>"; };
 		1DBD0C455F5313295AFB9243 /* Pods-FruitsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitsAppTests.release.xcconfig"; path = "Target Support Files/Pods-FruitsAppTests/Pods-FruitsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A4D12B4E7E859295BAA3D4B /* Pods-FruitsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitsApp.debug.xcconfig"; path = "Target Support Files/Pods-FruitsApp/Pods-FruitsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		46F39A39DC1BAC22051F9738 /* Pods_FruitsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FruitsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +190,7 @@
 				F91E9766276E4EEA009A2EE7 /* Model */,
 				F9E792A2276E9A1800232632 /* Extensions */,
 				F91E9730276E4E15009A2EE7 /* AppDelegate.swift */,
+				147E4DB32881ACD500FDECA7 /* GitBasics.swift */,
 				F91E9732276E4E15009A2EE7 /* SceneDelegate.swift */,
 				F91E9736276E4E15009A2EE7 /* Main.storyboard */,
 				F91E9739276E4E17009A2EE7 /* Assets.xcassets */,
@@ -514,6 +517,7 @@
 				F9C6B8D3276F78080018061D /* FruitDetailsViewModel.swift in Sources */,
 				F91E9779276E5789009A2EE7 /* Fruit.swift in Sources */,
 				F9C6B8CD276F77E40018061D /* FruitListViewModel.swift in Sources */,
+				147E4DB42881ACD500FDECA7 /* GitBasics.swift in Sources */,
 				F91E977F276E5842009A2EE7 /* FruitViewModel.swift in Sources */,
 				F91E9735276E4E15009A2EE7 /* FruitsTableViewController.swift in Sources */,
 				F9E7928F276E835F00232632 /* UsageStat.swift in Sources */,
